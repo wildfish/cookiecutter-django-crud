@@ -1,0 +1,13 @@
+{% raw %}
+{% extends "base.html" %}
+
+{% load floppyforms %}
+
+{% block content %}
+    <form method="post" action=".">
+    {% csrf_token %}
+    {% form form %}
+    <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+{% endblock %}
+{% endraw %}

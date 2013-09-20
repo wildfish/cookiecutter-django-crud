@@ -1,0 +1,17 @@
+{% raw %}
+{% extends "base.html" %}
+
+{% block content %}
+<a href="{% url '{% endraw %}{{ cookiecutter.app_name }}{% raw %}_create' %}">New</a>
+<ul>
+    {% for object in object_list %}
+        <li>
+            {{ object }}
+            <a href="{{ object.get_absolute_url }}">Details</a>
+            <a href="{% url '{% endraw %}{{ cookiecutter.app_name }}{% raw %}_update' object.pk %}">Update</a>
+            <a href="{% url '{% endraw %}{{ cookiecutter.app_name }}{% raw %}_delete' object.pk %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+{% endraw %}
