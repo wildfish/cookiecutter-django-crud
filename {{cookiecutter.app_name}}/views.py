@@ -27,6 +27,4 @@ class {{ cookiecutter.model_name }}Update({{ cookiecutter.model_name }}CRUDView,
 
 
 class {{ cookiecutter.model_name }}Delete({{ cookiecutter.model_name }}CRUDView, DeleteView):
-    def get_object(self, queryset=None):
-        return self.model.objects.get(pk=self.kwargs['pk'])
-
+    pass
