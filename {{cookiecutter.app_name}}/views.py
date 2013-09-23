@@ -1,4 +1,4 @@
-from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse_lazy
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 from .forms import {{ cookiecutter.model_name }}Form
 from .models import {{ cookiecutter.model_name }}
@@ -7,9 +7,7 @@ from .models import {{ cookiecutter.model_name }}
 class {{ cookiecutter.model_name }}CRUDView(object):
     model = {{ cookiecutter.model_name }}
     form_class = {{ cookiecutter.model_name }}Form
-
-    def get_success_url(self):
-        return reverse('{{ cookiecutter.app_name }}_list')
+    success_url = reverse_lazy('{{ cookiecutter.app_name }}_list')
 
 
 class {{ cookiecutter.model_name }}List({{ cookiecutter.model_name }}CRUDView, ListView):
