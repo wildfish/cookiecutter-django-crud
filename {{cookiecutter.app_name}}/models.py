@@ -10,3 +10,4 @@ class {{ cookiecutter.model_name }}(models.Model):
 
     def get_absolute_url(self):
         return reverse('{{ cookiecutter.app_name }}_detail', args=[str(self.id)])
+

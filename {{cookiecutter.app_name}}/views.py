@@ -28,3 +28,4 @@ class {{ cookiecutter.model_name }}Update({{ cookiecutter.model_name }}CRUDView,
 
 class {{ cookiecutter.model_name }}Delete({{ cookiecutter.model_name }}CRUDView, DeleteView):
     pass
+
