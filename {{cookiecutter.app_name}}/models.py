@@ -9,5 +9,5 @@ class {{ cookiecutter.model_name }}(models.Model):
         return '{{ cookiecutter.model_name }} ({})'.format(self.id or 'Unsaved')
 
     def get_absolute_url(self):
-        return reverse('{{ cookiecutter.app_name }}_detail', args=[str(self.id)])
+        return reverse('{{ cookiecutter.model_name|lower }}_detail', args=[str(self.id)])
 

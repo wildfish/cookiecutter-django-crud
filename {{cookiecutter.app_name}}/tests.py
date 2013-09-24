@@ -17,7 +17,7 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         Test that the list view returns at least our factory created instance.
         """
         instance = {{ cookiecutter.model_name }}Factory.create()
-        response = self.app.get(reverse('{{ cookiecutter.app_name }}_list'))
+        response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_list'))
         object_list = response.context['object_list']
         self.assertIn(instance, object_list)
 
@@ -25,7 +25,7 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         """
         Test that we can create an instance via the create view.
         """
-        response = self.app.get(reverse('{{ cookiecutter.app_name }}_create'))
+        response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_create'))
         new_name = 'A freshly created thing'
 
         # check that we don't already have a model with this name
@@ -51,7 +51,7 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         Test that we can update an instance via the update view.
         """
         instance = {{ cookiecutter.model_name }}Factory.create(name='Some old thing')
-        response = self.app.get(reverse('{{ cookiecutter.app_name }}_update', kwargs={'pk': instance.pk, }))
+        response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_update', kwargs={'pk': instance.pk, }))
 
         form = response.forms['thing_form']
         new_name = 'Some new thing'
@@ -66,7 +66,7 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         Test that we can delete an instance via the delete view.
         """
         pk = {{ cookiecutter.model_name }}Factory.create().pk
-        response = self.app.get(reverse('{{ cookiecutter.app_name }}_delete', kwargs={'pk': pk, }))
+        response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_delete', kwargs={'pk': pk, }))
         response = response.form.submit().follow()
         self.assertFalse({{ cookiecutter.model_name }}.objects.filter(pk=pk).exists())
 
