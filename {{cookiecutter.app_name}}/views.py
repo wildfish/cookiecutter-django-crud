@@ -11,7 +11,7 @@ class {{ cookiecutter.model_name }}CRUDView(object):
 
 
 class {{ cookiecutter.model_name }}List({{ cookiecutter.model_name }}CRUDView, ListView):
-    model = {{ cookiecutter.model_name }}
+    pass
 
 
 class {{ cookiecutter.model_name }}Create({{ cookiecutter.model_name }}CRUDView, CreateView):
