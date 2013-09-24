@@ -1,0 +1,28 @@
+{% raw %}<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+            <h1>Django CRUD Scaffold</h1>
+            <p>Default template for generated CRUD scaffold.  You should create your own base.html in your template root, with a block named "content".</p>
+            <ul>            
+                <li><a href="{% url '{% endraw %}{{ cookiecutter.model_name|lower }}{% raw %}_list' %}">List</a></li>
+                <li><a href="{% url '{% endraw %}{{ cookiecutter.model_name|lower }}{% raw %}_create' %}">Create</a></li>
+            </ul>
+            </div>
+            <div class="content">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>  
+{% endraw %}
