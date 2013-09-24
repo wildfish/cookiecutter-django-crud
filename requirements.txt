@@ -1,4 +1,4 @@
-cookiecutter
+-e git://github.com/audreyr/cookiecutter.git#egg=cookiecutter
 django-vanilla-views
 django-floppyforms
 factory-boy
