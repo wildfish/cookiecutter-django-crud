@@ -1,0 +1,6 @@
+cookiecutter
+django-vanilla-views
+django-floppyforms
+factory-boy
+webtest
+django-webtest
