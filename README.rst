@@ -42,4 +42,11 @@ Quickstart
     url(r'^things/', include('yourproject.yourapp.urls')),
 
 
+5. Run your newly created tests:
+
+.. code-block:: console
+
+    python manage.py test yourproject.yourapp
+
+
 Feel free to fork and make it your own, or send anything back up which you think may be generally useful.
