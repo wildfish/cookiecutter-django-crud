@@ -32,7 +32,7 @@ Quickstart
     INSTALLED_APPS = (
         ..
         'floppyforms',
-        'yourproject.yournewapp',
+        'yourproject.yourapp',
     )
 
 4. And don't forget to hook up your urls.py:
