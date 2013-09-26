@@ -8,6 +8,8 @@ An cookiecutter template to create a Django app within an existing Django projec
     * A FactoryBoy factory.
     * Tests for all of the views using WebTest.
 
+Blog post walkthrough at http://wildfish.com/blog/2013/09/25/generating-django-crud-scaffolding-cookiecutter/
+
 Quickstart
 ==========
 
