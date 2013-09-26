@@ -69,4 +69,4 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_delete', kwargs={'pk': pk, }))
         response = response.form.submit().follow()
         self.assertFalse({{ cookiecutter.model_name }}.objects.filter(pk=pk).exists())
-        
+
