@@ -31,7 +31,7 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         # check that we don't already have a model with this name
         self.assertFalse({{ cookiecutter.model_name }}.objects.filter(name=new_name).exists())
 
-        form = response.forms['thing_form']
+        form = response.forms['{{ cookiecutter.model_name|lower }}_form']
         form['name'] = new_name
         form.submit().follow()
 
@@ -53,7 +53,7 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         instance = {{ cookiecutter.model_name }}Factory.create(name='Some old thing')
         response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_update', kwargs={'pk': instance.pk, }))
 
-        form = response.forms['thing_form']
+        form = response.forms['{{ cookiecutter.model_name|lower }}_form']
         new_name = 'Some new thing'
         form['name'] = new_name
         form.submit().follow()
@@ -69,4 +69,4 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_delete', kwargs={'pk': pk, }))
         response = response.form.submit().follow()
         self.assertFalse({{ cookiecutter.model_name }}.objects.filter(pk=pk).exists())
-
+        
