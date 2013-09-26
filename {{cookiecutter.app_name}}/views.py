@@ -7,6 +7,7 @@ from .models import {{ cookiecutter.model_name }}
 class {{ cookiecutter.model_name }}CRUDView(object):
     model = {{ cookiecutter.model_name }}
     form_class = {{ cookiecutter.model_name }}Form
+    paginate_by = 20
 
     def get_success_url(self):
         return reverse('{{ cookiecutter.model_name|lower }}_list')
