@@ -1,7 +1,7 @@
 Cookiecutter Django CRUD
 =====================
 
-An cookiecutter template to create a Django app within an existing Django project, with boilerplate including:
+A cookiecutter template to create a Django app within an existing Django project, with boilerplate including:
     * A barebones Django model.
     * Django CRUD views and templates using django-vanilla-views.
     * A Django ModelForm using floppyforms.
