@@ -1,22 +1,22 @@
 from django.core.urlresolvers import reverse
 from django_webtest import WebTest
-from .factories import {{ cookiecutter.model_name }}Factory
+from model_mommy import mommy
 from .models import {{ cookiecutter.model_name }}
 
 
 class {{ cookiecutter.model_name }}Test(WebTest):
     def test_factory_create(self):
         """
-        Test that we can create an instance via the factory.
+        Test that we can create an instance via our object factory.
         """
-        instance = {{ cookiecutter.model_name }}Factory.create()
+        instance = mommy.make({{ cookiecutter.model_name }})
         self.assertTrue(isinstance(instance, {{ cookiecutter.model_name }}))
 
     def test_list_view(self):
         """
         Test that the list view returns at least our factory created instance.
         """
-        instance = {{ cookiecutter.model_name }}Factory.create()
+        instance = mommy.make({{ cookiecutter.model_name }})
         response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_list'))
         object_list = response.context['object_list']
         self.assertIn(instance, object_list)
@@ -42,7 +42,7 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         """
         Test that we can view an instance via the detail view.
         """
-        instance = {{ cookiecutter.model_name }}Factory.create()
+        instance = mommy.make({{ cookiecutter.model_name }})
         response = self.app.get(instance.get_absolute_url())
         self.assertEqual(response.context['object'], instance)
 
@@ -50,7 +50,7 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         """
         Test that we can update an instance via the update view.
         """
-        instance = {{ cookiecutter.model_name }}Factory.create(name='Some old thing')
+        instance = mommy.make({{ cookiecutter.model_name }})
         response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_update', kwargs={'pk': instance.pk, }))
 
         form = response.forms['{{ cookiecutter.model_name|lower }}_form']
@@ -65,7 +65,8 @@ class {{ cookiecutter.model_name }}Test(WebTest):
         """
         Test that we can delete an instance via the delete view.
         """
-        pk = {{ cookiecutter.model_name }}Factory.create().pk
+        instance = mommy.make({{ cookiecutter.model_name }})
+        pk = instance.pk
         response = self.app.get(reverse('{{ cookiecutter.model_name|lower }}_delete', kwargs={'pk': pk, }))
         response = response.form.submit().follow()
         self.assertFalse({{ cookiecutter.model_name }}.objects.filter(pk=pk).exists())

@@ -5,8 +5,8 @@ A cookiecutter template to create a Django app within an existing Django project
     * A barebones Django model.
     * Django CRUD views and templates using django-vanilla-views.
     * A Django ModelForm using floppyforms.
-    * A FactoryBoy factory.
     * Tests for all of the views using WebTest.
+    * Model Mommy generated models for the tests.
 
 Blog post walkthrough at http://wildfish.com/blog/2013/09/25/generating-django-crud-scaffolding-cookiecutter/
 
