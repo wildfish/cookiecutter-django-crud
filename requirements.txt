@@ -1,5 +1,5 @@
 django
--e git://github.com/audreyr/cookiecutter.git#egg=cookiecutter
+cookiecutter
 django-vanilla-views
 django-floppyforms
 model-mommy
