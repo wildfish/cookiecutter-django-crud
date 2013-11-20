@@ -13,7 +13,7 @@ Blog post walkthrough at http://wildfish.com/blog/2013/09/25/generating-django-c
 Quickstart
 ==========
 
-1. Currently requires the dev version of cookiecutter, and the generated app makes use of the packages listed in requirements.txt.  Install them all with:
+1. Install cookiecutter, and apps listed in requirements.txt for our generated app.  Install them all with:
 
 .. code-block:: console
 
