@@ -10,6 +10,13 @@ A cookiecutter template to create a Django app within an existing Django project
 
 Blog post walkthrough at http://wildfish.com/blog/2013/09/25/generating-django-crud-scaffolding-cookiecutter/
 
+Python 2 vs 3
+==========
+
+As of now I'm only testing with Python 3. The latest version to include the Python 2.7 compatibility decorators is in the `python2` branch. I don't expect I'll be continuing to maintain the python2 branch, but it should be straightforward and anyone else is welcome to.
+
+It's time you were using Python 3 now!
+
 Quickstart
 ==========
 
