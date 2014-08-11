@@ -10,6 +10,8 @@ A cookiecutter template to create a Django app within an existing Django project
 
 Blog post walkthrough at http://wildfish.com/blog/2013/09/25/generating-django-crud-scaffolding-cookiecutter/
 
+This template is now included in my Django project starter template at https://github.com/wildfish/wildfish-django-starter/. If you want to generate an entire Django project from scratch rather than just an app then take a look there.
+
 Python 2 vs 3
 ==========
 
