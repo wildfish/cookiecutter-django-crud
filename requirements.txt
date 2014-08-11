@@ -1,7 +1,7 @@
 django
 cookiecutter
 django-vanilla-views
-django-floppyforms
+django-bootstrap3
 model-mommy
 webtest
 django-webtest
