@@ -14,8 +14,8 @@
             <h1>Django CRUD Scaffold</h1>
             <p>Default template for generated CRUD scaffold.  You should create your own base.html in your template root, with a block named "content".</p>
             <ul>            
-                <li><a href="{% url '{% endraw %}{{ cookiecutter.model_name|lower }}{% raw %}_list' %}">List</a></li>
-                <li><a href="{% url '{% endraw %}{{ cookiecutter.model_name|lower }}{% raw %}_create' %}">Create</a></li>
+                <li><a href="{% url '{% endraw %}{{ cookiecutter.app_name }}{% raw %}:list' %}">List</a></li>
+                <li><a href="{% url '{% endraw %}{{ cookiecutter.app_name }}{% raw %}:create' %}">Create</a></li>
             </ul>
             </div>
             <div class="content">

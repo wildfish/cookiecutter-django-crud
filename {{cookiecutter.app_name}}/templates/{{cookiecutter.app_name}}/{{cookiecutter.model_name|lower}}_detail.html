@@ -3,6 +3,6 @@
 {% block content %}
     <h1>Detail</h1>
     <p>{{ object.name }}</p>
-    <a href="{% url '{% endraw %}{{ cookiecutter.model_name|lower }}{% raw %}_list' %}">List</a>
+    <a href="{% url '{% endraw %}{{ cookiecutter.app_name }}{% raw %}:list' %}">List</a>
 {% endblock %}
 {% endraw %}
