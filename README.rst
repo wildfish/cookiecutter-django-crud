@@ -50,7 +50,7 @@ Quickstart
 
 .. code-block:: python
 
-    url(r'^things/', include('yourproject.yourapp.urls')),
+    url(r'^things/', include('yourproject.yourapp.urls', namespace='yourapp')),
 
 
 5. Run your newly created tests:
